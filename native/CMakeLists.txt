@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.20)
+project(dynamic_icp_native LANGUAGES CXX)
+set(CMAKE_CXX_STANDARD 14)
+find_package(Python3 REQUIRED COMPONENTS Interpreter Development.Module)
+execute_process(COMMAND "${Python3_EXECUTABLE}" -m pybind11 --cmakedir
+                OUTPUT_VARIABLE PYBIND_CMAKE_DIR OUTPUT_STRIP_TRAILING_WHITESPACE)
+find_package(pybind11 CONFIG REQUIRED HINTS "${PYBIND_CMAKE_DIR}")
+find_package(Open3D CONFIG REQUIRED)
+find_package(OpenMP REQUIRED)
+set(OPEN3D_SOURCE "${CMAKE_CURRENT_SOURCE_DIR}/../Open3D" CACHE PATH "Patched Open3D source checkout")
+pybind11_add_module(_native MODULE bindings.cpp
+  "${OPEN3D_SOURCE}/cpp/open3d/pipelines/registration/DopplerPt2PlaneICP.cpp")
+target_include_directories(_native BEFORE PRIVATE "${OPEN3D_SOURCE}/cpp")
+target_link_libraries(_native PRIVATE Open3D::Open3D OpenMP::OpenMP_CXX)
+# Bind our rebuilt registration definitions even when another Open3D is loaded.
+if(UNIX AND NOT APPLE)
+  target_link_options(_native PRIVATE "-Wl,-Bsymbolic")
+endif()
+file(SHA256 "${OPEN3D_SOURCE}/cpp/open3d/pipelines/registration/DopplerPt2PlaneICP.cpp" SOLVER_SHA256)
+target_compile_definitions(_native PRIVATE DYNAMIC_ICP_SOLVER_SHA="${SOLVER_SHA256}")
+set_target_properties(_native PROPERTIES LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/../dynamic_icp")

@@ -1,0 +1,28 @@
+# Python and test artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local environments and builds
+.venv/
+venv/
+build/
+dist/
+
+# Editor and generated output
+.vscode/
+.idea/
+.agents/
+.codex/
+.DS_Store
+.env
+.env.*
+!.env.example
+*.log
+outputs/

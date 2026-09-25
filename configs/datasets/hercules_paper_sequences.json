@@ -1,0 +1,8 @@
+{
+  "bridge": "01_day",
+  "library": "01_day",
+  "parking_lot": "02_day",
+  "river_island": "01_day",
+  "stream": "01_day",
+  "street": "01_day"
+}

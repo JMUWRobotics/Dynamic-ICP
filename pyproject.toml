@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dynamic-icp"
+version = "0.1.0"
+description = "Doppler-aware iterative closest point registration for dynamic scenes"
+readme = "README.md"
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+  {name = "Dong Wang"},
+  {name = "Daniel Casado Herraez"},
+  {name = "Stefan May"},
+  {name = "Andreas Nüchter"},
+]
+dependencies = ["numpy>=1.24", "scipy>=1.10", "hdbscan>=0.8.33"]
+
+[project.urls]
+Repository = "https://github.com/JMUWRobotics/Dynamic-ICP"
+Paper = "https://doi.org/10.1109/LRA.2026.3669808"
+
+[project.optional-dependencies]
+test = ["pytest>=7"]
+native = ["pybind11>=2.10"]
+viewer = ["matplotlib>=3.7", "pillow>=9"]
+
+[project.scripts]
+dynamic-icp = "dynamic_icp.cli:main"
+dynamic-icp-viewer = "dynamic_icp.demo_viewer:main"
+
+[tool.setuptools.packages.find]
+include = ["dynamic_icp*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

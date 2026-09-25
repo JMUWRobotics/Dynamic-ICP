@@ -1,0 +1,419 @@
+{
+  "dataset": "HeRCULES",
+  "scene": "river_island",
+  "recording": "01_day",
+  "source_layout": "aeva29",
+  "stored_layout": "npz",
+  "selection": "maximum 20-frame dynamic-candidate count near the River Island coarse-scan peak",
+  "preprocessing": {
+    "range_m": [
+      0.2,
+      400.0
+    ],
+    "voxel_size_m": 0.3,
+    "retained_fields": [
+      "points",
+      "doppler",
+      "los",
+      "time_offsets"
+    ]
+  },
+  "config": {
+    "backend": "numpy",
+    "use_rotation_prior": false,
+    "ego_translation_weight": 0.0,
+    "ego_prior_min_speed": 0.0,
+    "deskew": false,
+    "lambda_doppler": 0.2,
+    "geometric_k": 0.5,
+    "doppler_k": 0.3,
+    "min_cluster_size": 30,
+    "min_samples": 10,
+    "max_iterations": 100,
+    "tolerance": 1e-05,
+    "max_correspondence_distance": 0.3,
+    "voxel_size": 0.3,
+    "normal_radius": 2.0,
+    "normal_max_nn": 30,
+    "huber_delta": 0.3,
+    "ego_iterations": 50,
+    "tau0": 0.35,
+    "kappa": 0.005,
+    "velocity_relative_threshold": 0.05,
+    "min_inlier_fraction": 0.5,
+    "min_singular_value": 0.001,
+    "max_condition_number": 400.0,
+    "correspondence_range_scale": 0.0,
+    "ablation": "full"
+  },
+  "summary": {
+    "frames": 20,
+    "source_start": 3055,
+    "source_stop_inclusive": 3074,
+    "mean_dynamic_fraction": 0.07403686193038683,
+    "mean_predicted_dynamic": 1019.35,
+    "mean_ego_speed_mps": 0.290075151597153
+  },
+  "frames": [
+    {
+      "source_index": 3055,
+      "source_file": "1724479779384729506.bin",
+      "file": "scans/1724479779384729506.npz",
+      "timestamp_s": "1724479779.384729506",
+      "points": 15982,
+      "ego_velocity_mps": [
+        0.16147133065824193,
+        0.14564549840444732,
+        -0.05993368054242802
+      ],
+      "ego_speed_mps": 0.22556074102863066,
+      "dynamic_candidates": 1104,
+      "dynamic_fraction": 0.0690777124264798,
+      "clustered_dynamic": 1035,
+      "predicted_dynamic": 1002,
+      "accepted_clusters": 14
+    },
+    {
+      "source_index": 3056,
+      "source_file": "1724479779480668050.bin",
+      "file": "scans/1724479779480668050.npz",
+      "timestamp_s": "1724479779.480668050",
+      "points": 16063,
+      "ego_velocity_mps": [
+        0.16477025822116326,
+        0.15410807741751664,
+        0.006719719771535542
+      ],
+      "ego_speed_mps": 0.2257070937152842,
+      "dynamic_candidates": 1121,
+      "dynamic_fraction": 0.06978771088837701,
+      "clustered_dynamic": 1045,
+      "predicted_dynamic": 1005,
+      "accepted_clusters": 12
+    },
+    {
+      "source_index": 3057,
+      "source_file": "1724479779603688445.bin",
+      "file": "scans/1724479779603688445.npz",
+      "timestamp_s": "1724479779.603688445",
+      "points": 16001,
+      "ego_velocity_mps": [
+        0.1617448535156383,
+        0.16149867846783747,
+        -0.06495645084337541
+      ],
+      "ego_speed_mps": 0.23761852051517593,
+      "dynamic_candidates": 1149,
+      "dynamic_fraction": 0.07180801199925005,
+      "clustered_dynamic": 1079,
+      "predicted_dynamic": 1038,
+      "accepted_clusters": 12
+    },
+    {
+      "source_index": 3058,
+      "source_file": "1724479779678657022.bin",
+      "file": "scans/1724479779678657022.npz",
+      "timestamp_s": "1724479779.678657022",
+      "points": 15801,
+      "ego_velocity_mps": [
+        0.16338070681375497,
+        0.16113745593101056,
+        -0.10029641407658803
+      ],
+      "ego_speed_mps": 0.2504354322764711,
+      "dynamic_candidates": 1164,
+      "dynamic_fraction": 0.07366622365673059,
+      "clustered_dynamic": 1080,
+      "predicted_dynamic": 1050,
+      "accepted_clusters": 13
+    },
+    {
+      "source_index": 3059,
+      "source_file": "1724479779778211315.bin",
+      "file": "scans/1724479779778211315.npz",
+      "timestamp_s": "1724479779.778211315",
+      "points": 15845,
+      "ego_velocity_mps": [
+        0.16025825461217688,
+        0.17568666534707808,
+        -0.08195054535200531
+      ],
+      "ego_speed_mps": 0.2515241627271793,
+      "dynamic_candidates": 1233,
+      "dynamic_fraction": 0.077816345850426,
+      "clustered_dynamic": 1159,
+      "predicted_dynamic": 1125,
+      "accepted_clusters": 15
+    },
+    {
+      "source_index": 3060,
+      "source_file": "1724479779879258827.bin",
+      "file": "scans/1724479779879258827.npz",
+      "timestamp_s": "1724479779.879258827",
+      "points": 15678,
+      "ego_velocity_mps": [
+        0.1614122021218341,
+        0.1705935025338675,
+        -0.09246084293407798
+      ],
+      "ego_speed_mps": 0.25239859265984965,
+      "dynamic_candidates": 1199,
+      "dynamic_fraction": 0.07647659140196454,
+      "clustered_dynamic": 1115,
+      "predicted_dynamic": 1063,
+      "accepted_clusters": 13
+    },
+    {
+      "source_index": 3061,
+      "source_file": "1724479779986491627.bin",
+      "file": "scans/1724479779986491627.npz",
+      "timestamp_s": "1724479779.986491627",
+      "points": 15583,
+      "ego_velocity_mps": [
+        0.16265283416014384,
+        0.1778938406818782,
+        -0.10320404597820028
+      ],
+      "ego_speed_mps": 0.2622083868207636,
+      "dynamic_candidates": 1180,
+      "dynamic_fraction": 0.07572354488866072,
+      "clustered_dynamic": 1126,
+      "predicted_dynamic": 1064,
+      "accepted_clusters": 12
+    },
+    {
+      "source_index": 3062,
+      "source_file": "1724479780091834584.bin",
+      "file": "scans/1724479780091834584.npz",
+      "timestamp_s": "1724479780.091834584",
+      "points": 15446,
+      "ego_velocity_mps": [
+        0.16284474660880888,
+        0.1901615369679252,
+        -0.12422076870338009
+      ],
+      "ego_speed_mps": 0.27948277409770605,
+      "dynamic_candidates": 1144,
+      "dynamic_fraction": 0.07406448271397126,
+      "clustered_dynamic": 1120,
+      "predicted_dynamic": 1085,
+      "accepted_clusters": 14
+    },
+    {
+      "source_index": 3063,
+      "source_file": "1724479780188279862.bin",
+      "file": "scans/1724479780188279862.npz",
+      "timestamp_s": "1724479780.188279862",
+      "points": 15253,
+      "ego_velocity_mps": [
+        0.16879777055500794,
+        0.19763027100394223,
+        -0.164046450633913
+      ],
+      "ego_speed_mps": 0.3073461392746257,
+      "dynamic_candidates": 980,
+      "dynamic_fraction": 0.06424965580541533,
+      "clustered_dynamic": 929,
+      "predicted_dynamic": 887,
+      "accepted_clusters": 10
+    },
+    {
+      "source_index": 3064,
+      "source_file": "1724479780280388464.bin",
+      "file": "scans/1724479780280388464.npz",
+      "timestamp_s": "1724479780.280388464",
+      "points": 15226,
+      "ego_velocity_mps": [
+        0.1718622275521936,
+        0.20240098892981442,
+        -0.12662245910469996
+      ],
+      "ego_speed_mps": 0.2941700744955038,
+      "dynamic_candidates": 1029,
+      "dynamic_fraction": 0.06758176802837253,
+      "clustered_dynamic": 964,
+      "predicted_dynamic": 931,
+      "accepted_clusters": 12
+    },
+    {
+      "source_index": 3065,
+      "source_file": "1724479780392688493.bin",
+      "file": "scans/1724479780392688493.npz",
+      "timestamp_s": "1724479780.392688493",
+      "points": 15108,
+      "ego_velocity_mps": [
+        0.1757657202082671,
+        0.19108533314303444,
+        -0.14470627555938723
+      ],
+      "ego_speed_mps": 0.29723239919124667,
+      "dynamic_candidates": 1117,
+      "dynamic_fraction": 0.07393433942282235,
+      "clustered_dynamic": 1060,
+      "predicted_dynamic": 997,
+      "accepted_clusters": 12
+    },
+    {
+      "source_index": 3066,
+      "source_file": "1724479780483921619.bin",
+      "file": "scans/1724479780483921619.npz",
+      "timestamp_s": "1724479780.483921619",
+      "points": 15080,
+      "ego_velocity_mps": [
+        0.17838380787644467,
+        0.1988266744974385,
+        -0.1628593531674921
+      ],
+      "ego_speed_mps": 0.3128513997385094,
+      "dynamic_candidates": 1113,
+      "dynamic_fraction": 0.07380636604774536,
+      "clustered_dynamic": 1068,
+      "predicted_dynamic": 1030,
+      "accepted_clusters": 11
+    },
+    {
+      "source_index": 3067,
+      "source_file": "1724479780595973781.bin",
+      "file": "scans/1724479780595973781.npz",
+      "timestamp_s": "1724479780.595973781",
+      "points": 14813,
+      "ego_velocity_mps": [
+        0.17996543839351506,
+        0.193464761866489,
+        -0.12406221397123206
+      ],
+      "ego_speed_mps": 0.2919034190201806,
+      "dynamic_candidates": 1015,
+      "dynamic_fraction": 0.06852089380949167,
+      "clustered_dynamic": 992,
+      "predicted_dynamic": 955,
+      "accepted_clusters": 10
+    },
+    {
+      "source_index": 3068,
+      "source_file": "1724479780678125664.bin",
+      "file": "scans/1724479780678125664.npz",
+      "timestamp_s": "1724479780.678125664",
+      "points": 14857,
+      "ego_velocity_mps": [
+        0.18122212020047407,
+        0.1938186913478668,
+        -0.18391652858914928
+      ],
+      "ego_speed_mps": 0.3228504784788743,
+      "dynamic_candidates": 1132,
+      "dynamic_fraction": 0.07619304031769536,
+      "clustered_dynamic": 1078,
+      "predicted_dynamic": 1048,
+      "accepted_clusters": 11
+    },
+    {
+      "source_index": 3069,
+      "source_file": "1724479780788195386.bin",
+      "file": "scans/1724479780788195386.npz",
+      "timestamp_s": "1724479780.788195386",
+      "points": 14824,
+      "ego_velocity_mps": [
+        0.18764953896729222,
+        0.1991508191409111,
+        -0.17805981537542576
+      ],
+      "ego_speed_mps": 0.32646392770207233,
+      "dynamic_candidates": 1144,
+      "dynamic_fraction": 0.07717215326497572,
+      "clustered_dynamic": 1085,
+      "predicted_dynamic": 1049,
+      "accepted_clusters": 10
+    },
+    {
+      "source_index": 3070,
+      "source_file": "1724479780882610556.bin",
+      "file": "scans/1724479780882610556.npz",
+      "timestamp_s": "1724479780.882610556",
+      "points": 14658,
+      "ego_velocity_mps": [
+        0.18452829770241055,
+        0.19081716544329544,
+        -0.20704409180304817
+      ],
+      "ego_speed_mps": 0.3366439353847214,
+      "dynamic_candidates": 1135,
+      "dynamic_fraction": 0.07743211897939692,
+      "clustered_dynamic": 1066,
+      "predicted_dynamic": 1028,
+      "accepted_clusters": 11
+    },
+    {
+      "source_index": 3071,
+      "source_file": "1724479780988569435.bin",
+      "file": "scans/1724479780988569435.npz",
+      "timestamp_s": "1724479780.988569435",
+      "points": 14429,
+      "ego_velocity_mps": [
+        0.18961021844265266,
+        0.1873817410393129,
+        -0.2188917089604756
+      ],
+      "ego_speed_mps": 0.34493119903023,
+      "dynamic_candidates": 1129,
+      "dynamic_fraction": 0.07824520063760482,
+      "clustered_dynamic": 1047,
+      "predicted_dynamic": 998,
+      "accepted_clusters": 9
+    },
+    {
+      "source_index": 3072,
+      "source_file": "1724479781094946539.bin",
+      "file": "scans/1724479781094946539.npz",
+      "timestamp_s": "1724479781.094946539",
+      "points": 14307,
+      "ego_velocity_mps": [
+        0.19010772949009097,
+        0.17957563035363588,
+        -0.1643378775377629
+      ],
+      "ego_speed_mps": 0.30886128572937077,
+      "dynamic_candidates": 1117,
+      "dynamic_fraction": 0.07807367023135528,
+      "clustered_dynamic": 1019,
+      "predicted_dynamic": 986,
+      "accepted_clusters": 9
+    },
+    {
+      "source_index": 3073,
+      "source_file": "1724479781190417240.bin",
+      "file": "scans/1724479781190417240.npz",
+      "timestamp_s": "1724479781.190417240",
+      "points": 14669,
+      "ego_velocity_mps": [
+        0.1941782684680945,
+        0.1813101309241222,
+        -0.20757522002458012
+      ],
+      "ego_speed_mps": 0.3371439388291632,
+      "dynamic_candidates": 1173,
+      "dynamic_fraction": 0.07996455109414412,
+      "clustered_dynamic": 1123,
+      "predicted_dynamic": 1070,
+      "accepted_clusters": 10
+    },
+    {
+      "source_index": 3074,
+      "source_file": "1724479781286776951.bin",
+      "file": "scans/1724479781286776951.npz",
+      "timestamp_s": "1724479781.286776951",
+      "points": 14350,
+      "ego_velocity_mps": [
+        0.1989509135802008,
+        0.17646648597348413,
+        -0.20563997204830356
+      ],
+      "ego_speed_mps": 0.33616913122750197,
+      "dynamic_candidates": 1107,
+      "dynamic_fraction": 0.07714285714285714,
+      "clustered_dynamic": 1018,
+      "predicted_dynamic": 976,
+      "accepted_clusters": 8
+    }
+  ]
+}
